@@ -1,0 +1,212 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+.navbar{
+    height : 4.5rem;
+    background: linear-gradient(123.75deg, #0D75D6 1.87%, #1C38C7 120.46%);
+    padding:0px 30px;
+    text-align: center;
+    text-align: start;
+    color : #ffffff;
+}
+.navbar img{
+    max-width:200px;
+    margin: 0px 20px;
+}
+.chatIcon{
+    position: fixed;
+    right: 30px;
+    bottom: 0;
+    font-size: 45px;
+    color: rgb(8, 8, 8);
+    cursor: pointer;
+}
+.chatbox{
+    position: absolute;
+    right: 12%;
+    bottom: 5px;
+    width : 418px;
+    height: 600px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+    background-color:#fff;
+    transition: all 0.5s ease-in;
+    transform: scaleY(0);
+}
+.chatbox .upperSection i{
+    display: none;
+}
+#close{
+    float: right;
+    font-size:20px;
+    padding:20px;
+    cursor: pointer;
+}
+.active{
+    transform: scaleY(1);
+}
+.upperSection{
+    height: 275px;
+    background: linear-gradient(123.75deg, #F5821F 1.87%, #FF5C00 120.46%);
+    border-radius: 15px 15px 0 0;
+}
+.description{
+    position: absolute;
+    left : 56px;
+    top : 20px;
+    color : #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap : 8px;
+}
+.description h1{
+    font-weight: bold;
+    font-size: 30px;
+}
+.description h3{
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+.description p{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+.lowerSection{
+    position: relative;
+}
+.robo-icon-area{
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    left: 38px;
+    top: -110px;
+    background: linear-gradient(180deg, #FF7600 0%, #FF5C00 100%);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.messageSection{
+    position: absolute;
+    top : -79px;
+    left : 13px;
+    width: 390px;
+    height: 400px;
+    background: #FFFFFF;
+    border: 1px solid #E4E4E4;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+.messageSection .heading{
+    position: absolute;
+    top : 50px;
+    left : 26px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #2D2D2D;
+}
+.messageContainer{
+    position: absolute;
+    top : 79px;
+    left : 26px;
+    display: flex;
+    flex-direction: column;
+    gap : 9px;
+}
+.messageBox{
+    position: relative;
+    width: 339px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    display: flex;
+    align-items: center; 
+}
+.messageBox p{
+    position: absolute;
+    top : 15px;
+    left : 27px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    color: #2D2D2D;
+}
+.button .btn{
+    position: absolute;
+    top : 335px;
+    left : 61px;
+    width: 268px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 100px; 
+}
+.messageBox svg{
+    position: relative;
+    left: 7px;
+}
+.messageSection .heading svg{
+    position: relative;
+    left: 7px;
+    top: 3px;
+}
+.opacity{
+    opacity: 1;
+}
+
+@media (max-width : 520px) {
+    .chatIcon{
+        position: absolute;
+    }
+    .chatbox{
+    left: 0;
+    top : 0;
+    width : 100%;
+    height: 100%;
+    bottom: 80px;
+    }
+    .messageSection{
+        left: 0;
+        width: 100%;
+    }
+    .messageBox{
+        width: 88vw;
+    }
+    .button .btn{
+        top:314px;
+        width: 70vw;
+    }
+    .chatbox .upperSection i{
+        display: block;
+        position: absolute;
+        left: 90%;
+        top : 10px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
+@media (min-width : 520px) and (max-width :1085px){
+    .chatbox{
+        height: 83vh;
+        position: absolute;
+        top:25px;
+        left:40px;
+        bottom: 0;
+    }
+}
